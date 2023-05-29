@@ -1,0 +1,23 @@
+@charset  "UTF-8";
+
+output{
+    font-weight: bold;
+    
+}
+
+#payment{
+
+    text-decoration: underline;
+        
+}
+
+#granph{
+    border: solid black 1px;
+}
+
+th, td{
+    vertical-align: top;
+}
+
+
+
