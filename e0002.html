@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Loan Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        canvas{
+            border: solid black 1px;
+        }
+    </style>
 </head>
 <body>
 
@@ -13,9 +18,60 @@
     <table>
 
         <!--Primeira linha com Caceçario-->
-        <tr><th>Ender Loan Data:</th></tr>
+        <tr><th>Ender Loan Data:</th>
         <td></td>
-        <th>Load Balance, Cumulative Equity, Interest Payments</th></table></tr>
+        <th>Load Balance, Cumulative Equity, Interest Payments</th></tr>
+
+        <!-- segunda linha-->
+
+        <tr>
+            <td>Amount of the loan ($):</td>
+                <td><input id=" amount" oncharge="calculate();"></td>
+                <td rowspan=6> <canvas id="graph " width="400" height="250"> </canvas> </td> 
+        </tr>
+
+        <!--Terceira linha-->
+        <tr>
+            <td>Annual interest (%):</td>
+            <td><input id="apr" onchange="calculate();"></td>
+        </tr>
+
+        <tr>
+            <td>Repayment pediod (years):</td>
+            <td><input id="years" oncharge="Calculate();"></td>
+        </tr>
+
+        <tr>
+            <td>Zipe Code (to find  lenders):</td>
+            <td><input id="zipcode" onchange="calculate();"></td>
+        </tr>
+
+        <td>
+            <th>Approximate Payments:</th>
+            <td> <button  onclick="Calculate();">Calculate</button></td>
+
+
+
+        </td>
+
+        <tr>
+            <td>Monthly payment:</td>
+            <td>$<span class="output" id="payment"></span></td>
+        </tr>
+
+        <tr>
+            <td>Total payment:</td>
+            <td>$<span class="output" id="total"></span></td>
+        </tr>
+
+
+
+        
+
+
+
+    
+    </table>
 
         
 
