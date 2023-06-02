@@ -64,6 +64,18 @@
             <td>$<span class="output" id="total"></span></td>
         </tr>
 
+        <tr>
+            <td>Total interest:</td>
+            <td>$ <span class="output" id ="totalinterest"></span></td >
+            
+        </tr>
+
+        <tr>
+            <th>Sponsors :</th>
+            <td colspan=2> Apply for your loan with one these fine lenders : <div id="lenders"><div><td></td>
+        </tr>
+
+
 
 
         
@@ -79,6 +91,15 @@
     </table>
 
     <script>
+        function calculate(){
+            var amount = document.getElementById("amount")
+            var apr = document.getElementById ("apr")
+            var years = document.getElemntById("years")
+            var zipcode = document.getElemntById("zipcode")
+            var payment = document.getElementById("payment")
+            var total = document.getElementById("total")
+            var totalinterest = document.getElementById("totalinterest")
+        }
         
        
 
