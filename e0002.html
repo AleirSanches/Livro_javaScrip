@@ -12,6 +12,7 @@
         }
     </style>
 </head>
+<!-- Aqui comoeça o codigo no Body------------------->
 <body>
 
     <h1>JavaScript Loan Calculator</h1>
@@ -22,7 +23,7 @@
         <td></td>
         <th>Load Balance, Cumulative Equity, Interest Payments</th></tr>
 
-        <!-- segunda linha-->
+        <!-- segunda linha  "VALOR EMPRESTADO"-->
 
         <tr>
             <td>Amount of the loan ($):</td>
@@ -30,11 +31,13 @@
                 <td rowspan=6> <canvas id="graph " width="400" height="250"> </canvas> </td> 
         </tr>
 
-        <!--Terceira linha-->
+        <!--Terceira linha "JUROS ANUAL"-->
         <tr>
             <td>Annual interest (%):</td>
             <td><input id="apr" onchange="calculate();"></td>
         </tr>
+
+        <!--Quarta Linha "Prazo anos"-->
 
         <tr>
             <td>Repayment pediod (years):</td>
@@ -65,7 +68,8 @@
         </tr>
 
         <tr>
-            <td>Total interest:</td>
+            <td>Total interest
+                :</td>
             <td>$ <span class="output" id ="totalinterest"></span></td >
             
         </tr>
@@ -99,6 +103,14 @@
             var payment = document.getElementById("payment")
             var total = document.getElementById("total")
             var totalinterest = document.getElementById("totalinterest")
+
+            var principal = parseFloat( amount.value);
+            var interest= parseFloat( apr.value) /100 /12;
+            var payments= paserFloat( years.value) *12;
+
+            var x = Math.pow(1 +)
+
+
         }
         
        
