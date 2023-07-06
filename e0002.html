@@ -95,24 +95,44 @@
     </table>
 
     <script>
-        function calculate(){
-            var amount = document.getElementById("amount")
-            var apr = document.getElementById ("apr")
-            var years = document.getElemntById("years")
-            var zipcode = document.getElemntById("zipcode")
-            var payment = document.getElementById("payment")
-            var total = document.getElementById("total")
-            var totalinterest = document.getElementById("totalinterest")
+        var scope="global variavel";
 
-            var principal = parseFloat( amount.value);
-            var interest= parseFloat( apr.value) /100 /12;
-            var payments= paserFloat( years.value) *12;
-
-            var x = Math.pow(1 +)
-
-
+        function checkscope(){
+            var scope= "local scope";
+            function f(){return scope;}
+            return f();
         }
         
+
+        console.log(checkscope());
+
+        function addPrivateProperty(o,name, predicate){
+
+            var value;
+            o["get"+name] = function(){ return value;};
+            o["set"+name] = function (v){
+                if (predicate && !predicate(v))
+                   throw Error ("set"+name+": invalid value"+ v);
+                else 
+                   value =v;
+
+                   
+            };
+        }
+            var o={};
+            addPrivateProperty(o,"Name", function(x) { return typeof x == "string";});
+            o.setName("Aleir");
+            console.log(o.getName());
+            o.setName(0);
+            console.log(o.getName());
+
+            
+
+
+
+
+
+             
        
 
         
