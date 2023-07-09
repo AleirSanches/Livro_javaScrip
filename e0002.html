@@ -149,7 +149,37 @@
                 return x+y+z;
             }
 
-            console.log("aqui  "+f (2,13));
+            console.log("aqui  "+f (2,13,8));
+
+            array_number= [1,2,7,3,14,5];
+
+            var biggest = Math.max.apply(Math, array_number);
+
+            console.log("O maior numero do Array e : "+biggest);
+
+            function f (y) {
+                return this.x+y;
+            }
+            var o= {x:2};
+            var g = f.bind(o);
+            console.log( "A soma da função f e=  "+g(8));
+
+            var sum = function(x,y){
+                return x+y;
+            }
+
+            var suss = sum.bind (null,2);
+
+            console.log("O retorno do metodo de SUSS e : "+suss(6));
+
+            function s (y,z){ 
+                return this.x+y+z;
+            }
+            var g= s.bind({x:3},3);
+
+            console.log("Soma de X,Y,Z= "+g(3));
+
+
 
             
 
